@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Subject;
-use App\Models\StudentInfo;
+use App\Models\Student;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +14,7 @@ class SubjectSeeder extends Seeder
      */
     public function run(): void
     {
-        StudentInfo::all()->each(function ($student) {
+        Student::all()->each(function ($student) {
             Subject::factory()->count(8)->create([
                 'student_id' => $student->id
             ]);

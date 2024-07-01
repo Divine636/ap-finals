@@ -27,6 +27,6 @@ class Subject extends Model
         'date_taken',
     ];
     public function student(){
-        return $this->belongsTo(StudentInfo::class);
+        return $this->belongsTo(Student::class);
     }
 }
